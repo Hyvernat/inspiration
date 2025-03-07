@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utilisateurs</title>
+</head>
+<body>
+    <h1>Liste des Utilisateurs</h1>
+    <ul>
+        <th:block th:each="utilisateur : ${utilisateurs}">
+            <li>
+                <a th:href="@{/conversations/{id}(id=${utilisateur.id})}" th:text="${utilisateur.nom}"></a>
+            </li>
+        </th:block>
+    </ul>
+</body>
+</html>
